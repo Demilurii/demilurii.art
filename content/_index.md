@@ -11,6 +11,7 @@ Hi, I'm Emilia! I'm a freelance artist and animation student at Sheridan College
 {% social_button(url="https://www.artstation.com/demilurii", fa="fab fa-artstation") %}Artstation{% end %}
 {% social_button(url="https://www.youtube.com/channel/UC42R1ei_TgqEit8FNNCNrig", fa="fab fa-youtube") %}YouTube{% end %}
 <br>
+<br>
 
 <!-- Demo reel -->
 {{youtube(id="qQMuGiNqkLo" class="youtube")}}
