@@ -1,0 +1,29 @@
+{# Load the base template #}
+{% extends "base.html" %}
+
+{# Configure the page title #}
+{% block title %}
+Page Not Found
+{% endblock title %}
+
+{# Some additional metadata overrides #}
+{% block head %}
+{{ super() }}
+
+{# Forces google not to index this page #}
+<meta name="robots" content="noindex" />
+
+{% endblock head %}
+
+{# This links the Markdown files into the HTML files #}
+{% block content %}
+<br><br><br>
+<div style="text-align: center;">
+    <h1>Oops. That page does not exist :(</h1>
+    <br><br>
+    <p>
+        Click <a href="/">here</a> to return to the homepage.
+        <br>Feel free to also <a href="/contact">let me know</a> how you ended up here so I can fix the issue.
+    </p>
+</div>
+{% endblock content %}

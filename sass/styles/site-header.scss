@@ -1,0 +1,56 @@
+// Style controls for the page header
+#site-header {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #fff4e8;
+
+  .sbs-split {
+    // Allow the title to sit beside the profile photo on bigger screens
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    // Selector rule to add padding to direct children
+    & > * {
+      padding: 15px;
+    }
+
+    // Custom font settings for the title
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+
+      h1 {
+        font-family: "Indie Flower", cursive;
+        font-weight: bolder;
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-family: "Handlee", cursive;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      // Some word formatting trickery for the subtitle
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        .maybe-br {
+          display: none;
+        }
+      }
+    }
+
+    // Image resizing controls
+    img {
+      @media screen and (max-width: 575px) {
+        width: 200px;
+        height: auto;
+      }
+    }
+  }
+}

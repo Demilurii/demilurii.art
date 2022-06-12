@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{# Website metadata block #}
+
+<head>{% block head %}
+
+    {# Browser compatibility flags #}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {# Automatically generate the browser title bar text based on various page settings #}
+    <title>{% block title %}{% endblock title %} | {{config.extra.site_name}}</title>
+
+    {# Adds your profile photo to the title bar #}
+    <link rel="shortcut icon" type="image/jpg" href="{{config.extra.profile_photo}}" />
+
+    {# This block will help your google results #}
+    {% if current_url %}
+    <link rel="canonical" href="{{current_url}}" />
+    {% endif %}
+
+    {# This is used for browsers to auto-detect blog posts if needed #}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{get_url(path="
+        rss.xml",trailing_slash=false)}}">
+
+    {# Definitions used for auto-generating a nice embed card in Twitter and Discord #}
+    <meta name="twitter:card" content="summary" />
+    <meta name="og:site" content="demilurii.art" />
+    <meta name="twitter:creator" content="@demilurii">
+    <meta name="og:image" content="{{config.extra.profile_photo}}" />
+    <meta name="og:site_name" content="{{config.extra.site_name}}" />
+
+    {# Load the Bootstrap CSS library for layout helpers #}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    {# Load our custom styles #}
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="stylesheet" href="/styles/site-header.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+
+    {# This must be the last line of the `head` definition #}
+    {% endblock head %}
+</head>
+
+<body>
+
+    {# Things inside this block will stay in the middle column #}
+    <div class="container">
+
+        {# This loads the header (profile pic & name) #}
+        {% include "components/header.html" %}
+
+        {# Site navigation bar #}
+        {% include "components/navbar.html" %}
+
+        {# This exists as a placeholder for content from another template file #}
+        <div id="page-content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+    </div>
+
+    {# Bootstrap helpers #}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
