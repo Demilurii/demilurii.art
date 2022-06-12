@@ -1,0 +1,18 @@
+{# Load the base template #}
+{% extends "base.html" %}
+
+{# Configure the page title #}
+{% block title %}
+{{page.title}}
+{% endblock title %}
+
+{# Some additional metadata overrides #}
+{% block head %}
+{{ super() }}
+
+{% endblock head %}
+
+{# This links the Markdown files into the HTML files #}
+{% block content %}
+{{page.content | safe}}
+{% endblock content %}

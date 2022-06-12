@@ -10,9 +10,17 @@
 {% block head %}
 {{ super() }}
 
+{# Metadata for embeds and google #}
+<meta property="og:description" content="{{config.description}}" />
+<meta property="description" content="{{config.description}}" />
+<meta name="description" content="{{config.description}}">
+<meta name="og:title" content="{{config.extra.site_name}}" />
+
 {% endblock head %}
 
 {# This links the Markdown files into the HTML files #}
 {% block content %}
-{{section.content | safe}}
+<div class="homepage-content">
+    {{section.content | safe}}
+</div>
 {% endblock content %}
