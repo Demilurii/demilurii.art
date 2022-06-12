@@ -7,9 +7,9 @@ title: Home
 Hi, I'm Emilia! I'm a freelance artist and animation student at Sheridan College.
 
 
-<a href="https://instagram.com/demilurii" rel="me"><button class="btn btn-outline-warning"><i class="fab fa-instagram"></i> Instagram</button></a>
-<a href="https://www.artstation.com/demilurii" rel="me"><button class="btn btn-outline-warning"><i class="fab fa-artstation"></i> Artstation</button></a>
-<a href="https://www.youtube.com/channel/UC42R1ei_TgqEit8FNNCNrig" rel="me"><button class="btn btn-outline-warning"><i class="fab fa-youtube"></i> YouTube</button></a>
+<a href="https://instagram.com/demilurii" rel="me" target="_blank"><button class="btn btn-outline-warning"><i class="fab fa-instagram"></i> Instagram</button></a>
+<a href="https://www.artstation.com/demilurii" rel="me" target="_blank"><button class="btn btn-outline-warning"><i class="fab fa-artstation"></i> Artstation</button></a>
+<a href="https://www.youtube.com/channel/UC42R1ei_TgqEit8FNNCNrig" rel="me" target="_blank"><button class="btn btn-outline-warning"><i class="fab fa-youtube"></i> YouTube</button></a>
 
 {{youtube(id="qQMuGiNqkLo" class="youtube")}}
 
@@ -18,7 +18,7 @@ Hi, I'm Emilia! I'm a freelance artist and animation student at Sheridan College
 # Projects
 
 <div class="project-cards">
-    <a href="/projects/data-loss">
+    <a href="https://ldjam.com/events/ludum-dare/49/dataloss" target="_blank">
         <div class="card" style="width: 18rem;">
             <img src="https://raw.githubusercontent.com/Ewpratten/ludum-dare-49/master/game/assets/logos/game-banner.png" class="card-img-top">
             <div class="card-body">

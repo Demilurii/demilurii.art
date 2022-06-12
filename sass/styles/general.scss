@@ -1,5 +1,8 @@
 .youtube {
   width: 100%;
+  max-width: 875px;
+  margin: auto;
+
   & > iframe {
     width: 100%;
     height: 500px;
@@ -9,6 +12,17 @@
       height: 300px;
     }
   }
+}
+
+body {
+  background: linear-gradient(90deg, #fff 21px, transparent 1%) center,
+    linear-gradient(#fff 21px, transparent 1%) center, #eedcc8;
+  background-size: 23px 23px;
+}
+
+.container {
+  background-color: #fff;
+  min-height: 90vh;
 }
 
 .homepage-content {
@@ -26,12 +40,12 @@
 }
 
 .footer {
-    text-align: center;
-    color:gray;
-    a {
-        text-decoration: none;
-        color:skyblue;
-    }
+  text-align: center;
+  color: gray;
+  a {
+    text-decoration: none;
+    color: skyblue;
+  }
 }
 
 .project-cards {
