@@ -16,6 +16,23 @@
 <meta name="description" content="{{config.description}}">
 <meta name="og:title" content="{{config.extra.site_name}}" />
 
+{# Magic that makes google happy #}
+<script type="application/ld+json">
+    {% set person_ld = load_data(path="jsonld/person.jsonld")%}
+    {% if person_ld %}{{person_ld | safe}}{% endif %}
+</script>
+<script type="application/ld+json">
+{# Import our template file #}
+{% set template = load_data(path="jsonld/website.jsonld") %}
+{# Now we can fill in any additional data #}
+{{ template | 
+    replace(from="{{url}}", to=config.base_url) | 
+    replace(from="{{title}}", to=section.title) | 
+    replace(from="{{description}}", to=config.description) | 
+    replace(from="{{avatar}}", to=config.extra.profile_photo) | 
+    safe 
+}}
+</script>
 {% endblock head %}
 
 {# This links the Markdown files into the HTML files #}

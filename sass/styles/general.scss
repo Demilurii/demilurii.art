@@ -1,18 +1,4 @@
-.youtube {
-  width: 100%;
-  max-width: 875px;
-  margin: auto;
 
-  & > iframe {
-    width: 100%;
-    height: 500px;
-
-    // Resizing breakpoints
-    @media screen and (max-width: 768px) {
-      height: 300px;
-    }
-  }
-}
 
 body {
   background: linear-gradient(90deg, #fff 21px, transparent 1%) center,
@@ -22,7 +8,6 @@ body {
 
 .container {
   background-color: #fff;
-  min-height: 90vh;
 }
 
 .homepage-content {
@@ -66,6 +51,7 @@ body {
       height: max-content;
       text-align: left;
       transition: box-shadow 0.15s ease-in-out;
+      margin-bottom:10px;
 
       & > .card-body {
         padding: 5px;

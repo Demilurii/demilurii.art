@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="/styles/fonts.css">
     <link rel="stylesheet" href="/styles/site-header.css">
     <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/general.css">
 
     {# This must be the last line of the `head` definition #}
@@ -52,14 +53,16 @@
 
 <body>
 
-    {# Things inside this block will stay in the middle column #}
-    <div class="container">
-
+    <div>
         {# This loads the header (profile pic & name) #}
         {% include "components/header.html" %}
 
         {# Site navigation bar #}
         {% include "components/navbar.html" %}
+    </div>
+
+    {# Things inside this block will stay in the middle column #}
+    <div class="container" id="container-content">
 
         {# This exists as a placeholder for content from another template file #}
         <div id="page-content">
@@ -74,7 +77,8 @@
             <hr>
             <p>
                 Artwork: &copy;Emilia Frias ({{now() | date(format="%Y")}})<br>
-                Website: <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU Public License v3.0</a><br>
+                Website: <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU Public License
+                    v3.0</a><br>
                 Design by: Emilia Frias & <a href="https://va3zza.com" target="_blank">Evan Pratten</a>
             </p>
         </div>

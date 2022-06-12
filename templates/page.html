@@ -10,6 +10,17 @@
 {% block head %}
 {{ super() }}
 
+{# Handle embed logic #}
+<meta property="og:title" content="{{page.title}} - {{config.extra.site_name}}" />
+<meta property="og:type" content="article" />
+{% if page.description %}
+<meta property="og:description" content="{{page.description}}" />
+<meta property="description" content="{{page.description}}" />
+{% else %}
+<meta property="og:description" content="{{config.description}}" />
+<meta property="description" content="{{config.description}}" />
+{% endif %}
+
 {% endblock head %}
 
 {# This links the Markdown files into the HTML files #}

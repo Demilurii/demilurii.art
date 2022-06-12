@@ -6,46 +6,42 @@ title: Home
 
 Hi, I'm Emilia! I'm a freelance artist and animation student at Sheridan College.
 
+<!-- Social links -->
+{% social_button(url="https://instagram.com/demilurii", fa="fab fa-instagram") %}Instagram{% end %}
+{% social_button(url="https://www.artstation.com/demilurii", fa="fab fa-artstation") %}Artstation{% end %}
+{% social_button(url="https://www.youtube.com/channel/UC42R1ei_TgqEit8FNNCNrig", fa="fab fa-youtube") %}YouTube{% end %}
 
-<a href="https://instagram.com/demilurii" rel="me" target="_blank"><button class="btn btn-outline-warning"><i class="fab fa-instagram"></i> Instagram</button></a>
-<a href="https://www.artstation.com/demilurii" rel="me" target="_blank"><button class="btn btn-outline-warning"><i class="fab fa-artstation"></i> Artstation</button></a>
-<a href="https://www.youtube.com/channel/UC42R1ei_TgqEit8FNNCNrig" rel="me" target="_blank"><button class="btn btn-outline-warning"><i class="fab fa-youtube"></i> YouTube</button></a>
-
+<!-- Demo reel -->
 {{youtube(id="qQMuGiNqkLo" class="youtube")}}
 
 <br>
+<hr>
 
-# Projects
+# Past Work
 
 <div class="project-cards">
-    <a href="https://ldjam.com/events/ludum-dare/49/dataloss" target="_blank">
-        <div class="card" style="width: 18rem;">
-            <img src="https://raw.githubusercontent.com/Ewpratten/ludum-dare-49/master/game/assets/logos/game-banner.png" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title">[data::loss]</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Video Game</h6>
-            </div>
-        </div>
-    </a>
-    <a href="/projects/team-jerms">
-        <div class="card" style="width: 18rem;">
-            <img src="https://i.ytimg.com/vi_webp/6Vv-8TZRzi8/maxresdefault.webp" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title">24 Hour Animation Challenge</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Short Film</h6>
-            </div>
-        </div>
-    </a>
-    <a href="/404">
-        <div class="card" style="width: 18rem;">
-            <img src="https://cdn.artstation.com/static_media/placeholders/user/cover/default.jpg" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title">A third project</h5>
-                <h6 class="card-subtitle mb-2 text-muted">???</h6>
-            </div>
-        </div>
-    </a>
-</div>
-<br>
+<!-- Define your past work in here -->
+{{ project_card(
+    url="https://ldjam.com/events/ludum-dare/49/dataloss",
+    external=true,
+    title="[data::loss]",
+    img="https://raw.githubusercontent.com/Ewpratten/ludum-dare-49/master/game/assets/logos/game-banner.png",
+    subtitle="Video Game"
+)}}
+{{ project_card(
+    url="/projects/team-jerms",
+    external=false,
+    title="24 Hour Animation Challenge",
+    img="https://i.ytimg.com/vi_webp/6Vv-8TZRzi8/maxresdefault.webp",
+    subtitle="Short Film"
+)}}
+{{ project_card(
+    url="/404",
+    external=false,
+    title="A third project",
+    img="https://cdn.artstation.com/static_media/placeholders/user/cover/default.jpg",
+    subtitle="???"
+)}}
+</div><br>
 
 <!-- # Additional Work -->
