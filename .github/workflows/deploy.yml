@@ -23,6 +23,6 @@ jobs:
         with:
           target_branch: gh-pages
           build_dir: public
-          fqdn: demilurii.dev.va3zza.com
+          fqdn: demilurii.art
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
