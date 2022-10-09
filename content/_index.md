@@ -31,7 +31,7 @@ Hi, I'm Emilia! I'm a freelance artist and animation student at Sheridan College
     subtitle="Video Game"
 )}}
 {{ project_card(
-    url="[/projects/team-jerms](https://www.youtube.com/watch?v=6Vv-8TZRzi8)",
+    url="https://www.youtube.com/watch?v=6Vv-8TZRzi8",
     external=true,
     title="24 Hour Animation Challenge",
     img="https://i.ytimg.com/vi_webp/6Vv-8TZRzi8/maxresdefault.webp",
