@@ -21,6 +21,11 @@
 <meta property="description" content="{{config.description}}" />
 {% endif %}
 
+{# Redirect support #}
+{% if page.extra.redirect %}
+<meta http-equiv="refresh" content="0; url={{page.extra.redirect}}" />
+{% endif %}
+
 {% endblock head %}
 
 {# This links the Markdown files into the HTML files #}
