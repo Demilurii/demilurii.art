@@ -25,6 +25,13 @@ Hi, I'm Emilia! I'm a freelance artist and animation student at Sheridan College
 <div class="project-cards">
 <!-- Define your past work in here -->
 {{ project_card(
+    url="https://www.youtube.com/watch?v=uCWffIF-i1g",
+    external=true,
+    title="A Case of the Sniffles",
+    img="https://i.ytimg.com/vi_webp/uCWffIF-i1g/maxresdefault.webp",
+    subtitle="Animatic"
+)}}
+{{ project_card(
     url="https://www.youtube.com/watch?v=8GVTwleS61k",
     external=true,
     title="24 Hour Animation Challenge 2022",
