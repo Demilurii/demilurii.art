@@ -15,7 +15,7 @@ Hi, I'm Emilia! I'm a freelance artist and animation student at Sheridan College
 <br>
 
 <!-- Demo reel -->
-{{youtube(id="yTi8srXVCtE" class="youtube")}}
+{{youtube(id="T9nJZRHYSDM" class="youtube")}}
 
 <br>
 <hr>
