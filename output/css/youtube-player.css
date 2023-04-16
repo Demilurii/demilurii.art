@@ -1,0 +1,30 @@
+.yt-player {
+    display: block;
+    border-radius:5px;
+    max-width: 900px;
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.yt-player {
+    height: 250px;
+}
+
+@media screen and (min-width: 577px) {
+    .yt-player {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .yt-player {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    .yt-player {
+        height: 525px;
+    }
+}
