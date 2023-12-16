@@ -1,129 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Preahvihear&display=swap');
+@import url("./typography.css");
+@import url("./navigation.css");
+@import url("./splash.css");
+
+:root {
+    --content-max-width: 1200px;
+    --header-color: #055c55;
+}
 
 body {
-    font-family: 'Preahvihear', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Caveat', cursive;
-}
-
-
-header {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("/static/images/home_splash.png");
-    background-position: center;
-    background-size: cover;
-    color: white;
-    text-shadow: 2px 2px 2px rgb(54, 105, 89);
-
-}
-
-/* header #header-content {
-     width: 100%; 
-    height: 100%;
-    max-width: 1700px;
-    margin: auto;
-} */
-
-header #info-parent {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    height: fit-content;
-    width: 100%;
-    height: 100%;
-}
-
-header #my-info {
-    width: 100%;
-    max-width: 1250px;
-    margin: auto;
-}
-
-header #my-info h1 {
-    font-size: 13em;
-    margin: 0;
-}
-
-nav > div{
-    display: flex;
-    justify-content: space-between;
-    max-width: 1700px;
-    margin: auto;
-
-}
-
-nav.sticky {
-    position: sticky;
-}
-
-nav.dark-bg {
-     background-color: #055c55;
-}
-
-nav.floating {
-    position: fixed;
-    width: 100vw;
-    margin: auto;
-}
-
-nav #brand {
-    font-family: 'Caveat', cursive;
-    font-size: 2.5em;
-    color: white;
-}
-
-
-
-nav ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-nav ul>li {
-    margin: 0.75em;
-}
-
-nav ul>li>a {
-    text-decoration: none;
-    color: white;
-}
-
-#social-buttons {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    /* margin-bottom: 10em; */
-    list-style: none;
-}
-
-#social-buttons>li {
-    margin: 0.5em;
-}
-
-#social-buttons>li>a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-    padding: 0 10px;
-    background-color: #055c55;
-    border-radius: 18px;
-    line-height: 0.75em;
 }
 
 main {
     width: 100%;
-    max-width: 1250px;
+    max-width: var(--content-max-width);
     margin: auto;
+}
+
+.youtube-embed {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+header.page-header {
+    width: 100%;
+    padding: 1em 0;
+    max-width: var(--content-max-width);
+    margin: auto;
+    margin-top:1em;
+    text-align: center;
+    color: white;
+    background-color: var(--header-color);
+    border-radius: 5px;
+}
+
+header.page-header h1 {
+    margin: 0;
+}
+
+@media screen and (max-width: 720px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .desktop-hidden {
+        display: none;
+    }
 }

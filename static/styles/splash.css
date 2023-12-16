@@ -1,0 +1,111 @@
+/* Styles for the home splash screen */
+
+header#splash {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/static/images/home_splash.png");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(54, 105, 89);
+}
+
+header#splash .splash-floater {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+header#splash #hi-text {
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    margin-left: 1.5em;
+}
+
+header#splash #my-info {
+    width: 100%;
+    max-width: 1350px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+header#splash h1 {
+    font-size: 13em;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+    pointer-events: auto;
+}
+
+header#splash .social-buttons {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    pointer-events: auto;
+}
+
+header#splash .social-buttons li {
+    text-align: center;
+    margin: 0 1em;
+    min-width: 2.5em;
+    line-height: 1em;
+    padding: 10px;
+    background-color: #2f5952;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgb(54, 105, 89);
+}
+
+header#splash .social-buttons li:hover {
+    background-color: #3f6f62;
+    box-shadow: 4px 4px 4px rgb(54, 105, 89);
+}
+
+header#splash .social-buttons li a {
+    text-shadow: none;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+}
+
+/* On mobile, the splash centers itself */
+@media screen and (max-width:720px) {
+    header#splash #my-info {
+        align-items: center;
+    }
+
+    header#splash #hi-text {
+        margin-left: 0;
+    }
+
+    header#splash h1 {
+        font-size: 8em;
+        margin-bottom: 0.25em;
+    }
+
+    header#splash .social-buttons {
+        flex-direction: column;
+    }
+
+    header#splash .social-buttons li {
+        margin: 0.5em 0;
+    }
+}
+
+/* Smaller screens need smaller title text */
+@media screen and (max-width: 435px) {
+    header#splash h1 {
+        font-size: 6em;
+    }
+
+    header#splash .social-buttons li a {
+        font-size: 1.5em;
+    }
+}

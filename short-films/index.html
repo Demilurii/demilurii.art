@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Short Films | Emilia Frias</title>
     <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/typography.css">
 </head>
 
 <body>
-    <nav class="dark-bg">
-        <div>
-            <span id="brand">Demilurii</span>
-            <ul>
+    <nav class="sticky">
+        <div class="nav-content">
+            <h1 class="nav-brand">Demilurii // Short Films</h1>
+            <ul class="nav-items">
                 <li><a href="/">Home</a></li>
                 <li><a href="/rigging">Rigging</a></li>
                 <li><a href="/animation">Animation</a></li>
@@ -22,11 +23,27 @@
         </div>
     </nav>
 
+
     <main>
-        <H1>Short Films</H1>
-        <H2>Raindrops</H2>
-        <H2>Sprout</H2>
-        <H2>Storm Clouds</H2>
+        <!-- NOTE: Want to change/add a new video? Copy the iframe tag, and switch the part after /embed/ -->
+
+        <section>
+            <H2>Raindrops</H2>
+            <iframe class="youtube-embed" src="https://www.youtube.com/embed/RqzLxaQ3abM" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <H2>Sprout</H2>
+            <iframe class="youtube-embed" src="https://www.youtube.com/embed/qqygIIp9QKc" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <H2>Storm Clouds</H2>
+            <iframe class="youtube-embed" src="https://www.youtube.com/embed/cczg7yLszHk" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+        </section>
     </main>
 </body>
 

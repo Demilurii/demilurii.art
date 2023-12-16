@@ -1,0 +1,71 @@
+/* This file controls the site navbar */
+
+nav {
+    background-color: var(--header-color);
+    z-index: 100;
+}
+
+nav.sticky {
+    box-shadow: 0 0 0.5em black;
+}
+
+@media screen and (min-width: 720px) {
+    nav.sticky {
+        position: sticky;
+        top: 0;
+    }
+}
+
+nav.transparent {
+    background-color: transparent;
+}
+
+nav .nav-content {
+    max-width: var(--content-max-width);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+nav .nav-brand {
+    margin: 0;
+    font-family: 'Caveat', cursive;
+    font-size: 2.5em;
+    color: white;
+}
+
+nav ul.nav-items {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul.nav-items li {
+    margin: 0.75em;
+}
+
+nav ul.nav-items li>a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul.nav-items li>a:hover {
+    text-shadow: 0 0 0.5em white;
+}
+
+@media screen and (max-width: 719px) {
+    nav .nav-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.nav-items {
+        justify-content: center;
+    }
+}
