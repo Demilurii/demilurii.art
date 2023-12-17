@@ -10,13 +10,14 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="sticky">
         <div class="nav-content">
             <h1 class="nav-brand">Demilurii // Rigging</h1>
             <ul class="nav-items">
                 <li><a href="/">Home</a></li>
+                <li><a href="/about">About Me</a></li>
                 <li><a href="/rigging">Rigging</a></li>
-                <li><a href="/animation">Animation</a></li>
+                <!-- <li><a href="/animation">Animation</a></li> -->
                 <li><a href="/short-films">Short Films</a></li>
             </ul>
         </div>
@@ -29,11 +30,23 @@
 
         <section>
             <H2>Say Hi to Sprout</H2>
-            <div class="rig-rotator" data-name="sprout">
-                <img src="/static/images/rigs/sprout/sprout-0001.png">
-                <input type="range" min="1" max="8" value="8" oninput="handleRigNewFrame(this);"
-                    onchange="handleRigNewFrame(this);">
+            <div class="rig-showcase">
+                <div class="rig-rotator" data-name="sprout">
+                    <img src="/static/images/rigs/sprout/sprout-0001.png">
+                    <div class="rig-controls">
+                        <span class="input-title">Rotate Me!</span>
+                        <input type="range" min="1" max="9" value="1" oninput="handleRigNewFrame(this);"
+                            onchange="handleRigNewFrame(this);">
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        asdfkashdfkjashdfkj
+                    </p>
+                </div>
             </div>
+            <iframe class="youtube-embed" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
         </section>
 
         <section>

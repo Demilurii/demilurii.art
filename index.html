@@ -10,19 +10,22 @@
     <link rel="stylesheet" href="/static/styles/main.css">
 </head>
 
-<body>
+<body data-page="home">
     <header id="splash">
         <nav class="transparent">
             <div class="nav-content">
                 <span class="nav-brand mobile-hidden">Demilurii.art</span>
                 <ul class="nav-items">
                     <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
                     <li><a href="/rigging">Rigging</a></li>
-                    <li><a href="/animation">Animation</a></li>
+                    <!-- <li><a href="/animation">Animation</a></li> -->
                     <li><a href="/short-films">Short Films</a></li>
                 </ul>
             </div>
         </nav>
+
+        <div id="particles-js"></div>
 
         <div class="splash-floater">
             <div id="my-info">
@@ -61,6 +64,12 @@
         </div>
     </header>
     <script data-goatcounter="https://demilurii.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', '/static/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
 </body>
 
 </html>

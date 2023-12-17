@@ -10,6 +10,17 @@ header#splash {
     text-shadow: 2px 2px 2px rgb(54, 105, 89);
 }
 
+header#splash #particles-js {
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
 header#splash .splash-floater {
     width: 100vw;
     height: 100vh;

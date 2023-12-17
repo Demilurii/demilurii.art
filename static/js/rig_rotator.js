@@ -1,7 +1,7 @@
 const zeroPad = (num, places) => String(num).padStart(places, '0')
 
 function handleRigNewFrame(element){
-    var parent_element = element.parentElement;
+    var parent_element = element.parentElement.parentElement;
     var rig_name = parent_element.getAttribute("data-name");
     var rig_frame = parent_element.querySelector("img");
     var max_frame_id = parseInt(element.max);
