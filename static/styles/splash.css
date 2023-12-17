@@ -54,11 +54,11 @@ header#splash .social-buttons {
 
 header#splash .social-buttons li {
     text-align: center;
-    margin: 0 1em;
+    margin: 0 .5em;
     min-width: 2.5em;
     line-height: 1em;
     padding: 10px;
-    background-color: #2f5952;
+    background-color: #024143;
     border-radius: 20px;
     box-shadow: 2px 2px 2px rgb(54, 105, 89);
 }

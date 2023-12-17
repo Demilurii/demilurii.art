@@ -21,3 +21,8 @@ h1 {
 h2 {
     font-size: 2.5em;
 }
+
+main h2 {
+    border-bottom: 1px solid rgb(138, 138, 138);
+    border-bottom-style: dashed;
+}
