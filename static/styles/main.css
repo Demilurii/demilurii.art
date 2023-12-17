@@ -1,6 +1,7 @@
 @import url("./typography.css");
 @import url("./navigation.css");
 @import url("./splash.css");
+@import url("./rigs.css");
 
 :root {
     --content-max-width: 1200px;
