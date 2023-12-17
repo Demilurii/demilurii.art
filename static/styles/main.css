@@ -1,6 +1,7 @@
 @import url("./typography.css");
 @import url("./navigation.css");
 @import url("./splash.css");
+@import url("./rigs.css");
 
 :root {
     --content-max-width: 1200px;
@@ -10,12 +11,28 @@
 body {
     margin: 0;
     padding: 0;
+    /* background-color: var(--header-color); */
 }
+
+body[data-page="home"] {
+    overflow: hidden;
+}
+
+/* body:not([data-page="home"]) {
+    background-image: url("/static/images/home_splash.png");
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(50px);
+    background-attachment: fixed;
+} */
 
 main {
     width: 100%;
+    min-height: 100vh;
     max-width: var(--content-max-width);
     margin: auto;
+    padding: 1em;
+    background-color: white;
 }
 
 .youtube-embed {
@@ -28,7 +45,7 @@ header.page-header {
     padding: 1em 0;
     max-width: var(--content-max-width);
     margin: auto;
-    margin-top:1em;
+    margin-top: 1em;
     text-align: center;
     color: white;
     background-color: var(--header-color);
