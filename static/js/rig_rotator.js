@@ -12,7 +12,7 @@ function handleRigNewFrame(element){
     current_frame_id += 1;
     
     // Build the new image path
-    var img = `/static/images/rigs/${rig_name}/${rig_name}-${zeroPad(current_frame_id, 4)}.png`;
+    var img = `/static/images/rigs/${rig_name}/${rig_name}-${zeroPad(current_frame_id, 2)}.png`;
 
     // Update the image path
     rig_frame.src = img;

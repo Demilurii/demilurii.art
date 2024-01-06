@@ -8,6 +8,12 @@
     margin: 0 1em;
 }
 
+.static-rig {
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px grey;
+}
+
 .rig-rotator {
     max-width: 500px;
     /* margin: auto; */
