@@ -29,10 +29,13 @@ body[data-page="home"] {
 main {
     width: 100%;
     min-height: 100vh;
-    max-width: var(--content-max-width);
+    max-width: min(var(--content-max-width), 100vw);
     margin: auto;
-    padding: 1em;
     background-color: white;
+}
+
+main > section {
+    padding: 1em;
 }
 
 .youtube-embed {
