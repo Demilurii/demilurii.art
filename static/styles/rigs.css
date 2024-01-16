@@ -1,6 +1,7 @@
 .rig-showcase {
     display: flex;
     flex-direction: row;
+    height:min-content;
 }
 
 @media screen and (min-width: 1040px) {
@@ -27,6 +28,8 @@
 }
 
 .rig-showcase .gifs {
+    margin: auto;
+    max-height: 100%;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -36,30 +39,16 @@
     width: 100%;
     border-radius: 5px;
     box-shadow: 0 0 5px grey;
-    margin: 0.5em 0;
-}
-
-.rig-follow-screen {
-    position: sticky;
-    top: 3em;
+    margin: 0.5em;
 }
 
 .static-rig {
+    margin: auto;
     max-width: 500px;
     border-radius: 5px;
     box-shadow: 0 0 5px grey;
 }
 
-
-.rig-rotator-container {
-    margin: 0.5em 0;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-}
 
 .rig-rotator {
     max-width: 500px;
@@ -75,7 +64,6 @@
 .rig-rotator img {
     max-width: 100%;
     pointer-events: none;
-    /* border-bottom: 1px solid grey; */
 }
 
 .rig-rotator .rig-controls {
