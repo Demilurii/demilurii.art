@@ -18,7 +18,7 @@
 
     .rig-showcase .gifs img,
     .rig-rotator {
-        margin: 0.5em;
+        margin: 0.5em 0 !important;
     }
 
     .rig-showcase .gifs img {
