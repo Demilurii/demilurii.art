@@ -1,0 +1,72 @@
+@import url("./typography.css");
+@import url("./navigation.css");
+@import url("./splash.css");
+@import url("./rigs.css");
+
+:root {
+    --content-max-width: 1200px;
+    --header-color: #055c55;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: var(--header-color); */
+}
+
+body[data-page="home"] {
+    overflow: hidden;
+}
+
+/* body:not([data-page="home"]) {
+    background-image: url("/static/images/home_splash.png");
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(50px);
+    background-attachment: fixed;
+} */
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    max-width: min(var(--content-max-width), 100vw);
+    margin: auto;
+    background-color: white;
+}
+
+main > section {
+    padding: 1em;
+}
+
+.youtube-embed {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+header.page-header {
+    width: 100%;
+    padding: 1em 0;
+    max-width: var(--content-max-width);
+    margin: auto;
+    margin-top: 1em;
+    text-align: center;
+    color: white;
+    background-color: var(--header-color);
+    border-radius: 5px;
+}
+
+header.page-header h1 {
+    margin: 0;
+}
+
+@media screen and (max-width: 720px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .desktop-hidden {
+        display: none;
+    }
+}
