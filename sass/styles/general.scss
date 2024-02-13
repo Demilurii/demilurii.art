@@ -1,0 +1,78 @@
+
+
+body {
+  background: linear-gradient(90deg, #fff 21px, transparent 1%) center,
+    linear-gradient(#fff 21px, transparent 1%) center, #eedcc8;
+  background-size: 23px 23px;
+}
+
+.container {
+  background-color: #fff;
+}
+
+.homepage-content {
+  text-align: center;
+}
+
+.btn-outline-warning {
+  border-color: #cc8111 !important;
+  color: #cc8111 !important;
+
+  &:hover {
+    background-color: #cc8111 !important;
+    color: #fff !important;
+  }
+}
+
+.footer {
+  text-align: center;
+  color: gray;
+  a {
+    text-decoration: none;
+    color: skyblue;
+  }
+}
+
+.project-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  // Configures link styling and vertical center
+  & > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+
+    & > .card {
+      height: max-content;
+      text-align: left;
+      transition: box-shadow 0.15s ease-in-out;
+      margin-bottom:10px;
+
+      & > .card-body {
+        padding: 5px;
+        padding-top: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        h5 {
+          font-family: "Indie Flower", cursive !important;
+          font-weight: bold !important;
+        }
+        h6 {
+          font-family: "Mali", cursive !important;
+        }
+      }
+
+      // Allows the cards to "float" when hovered
+      &:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+  }
+}

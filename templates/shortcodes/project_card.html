@@ -1,0 +1,10 @@
+{# Handles clickable project cards #}
+<a href="{{url}}" {% if external %}target="_blank" {% endif %}>
+    <div class="card" style="width: 20rem;">
+        <img src="{{img}}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{subtitle}}</h6>
+        </div>
+    </div>
+</a>
