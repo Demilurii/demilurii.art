@@ -65,7 +65,7 @@ header.page-header h1 {
     }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 857px) {
     .desktop-hidden {
         display: none;
     }

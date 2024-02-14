@@ -87,7 +87,7 @@ header#splash .social-buttons li a {
 }
 
 /* On mobile, the splash centers itself */
-@media screen and (max-width:720px) {
+@media screen and (max-width:857px) {
     header#splash #my-info {
         align-items: center;
     }
@@ -111,12 +111,17 @@ header#splash .social-buttons li a {
 }
 
 /* Smaller screens need smaller title text */
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 527px) {
     header#splash h1 {
         font-size: 6em;
     }
 
     header#splash .social-buttons li a {
         font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 395px) {
+    header#splash h1 {
+        font-size: 5em;
     }
 }
