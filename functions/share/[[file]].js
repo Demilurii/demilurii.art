@@ -13,6 +13,7 @@ export async function onRequest(context) {
     // Make a call to the analytics API to track this request
     let analytics_success = false;
     if ("GOATCOUNTER_API_KEY" in context.env) {
+        console.log("Sending analytics to GoatCounter");
         await fetch(
             "https://analytics.demilurii.art/api/v0/count",
             {
@@ -33,6 +34,8 @@ export async function onRequest(context) {
             }
         );
         analytics_success = true;
+    } else {
+        console.warn("No GOATCOUNTER_API_KEY environment variable found. Skipping analytics.");
     }
 
     // Re-write URL to point to the real file server
