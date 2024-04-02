@@ -28,7 +28,8 @@ export async function onRequest(context) {
                         ref: context.request.headers.get("Referer"),
                         user_agent: context.request.headers.get("User-Agent"),
                     }
-                ]
+                ],
+                no_sessions: true
             })
         }
     );
