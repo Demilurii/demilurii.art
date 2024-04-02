@@ -11,6 +11,8 @@ export async function onRequest(context) {
     let file_path = url.pathname;
 
     // Make a call to the analytics API to track this request
+    let referer = ("Referer" in context.request.headers) ? context.request.headers["Referer"] : null;
+    let user_agent = ("User-Agent" in context.request.headers) ? context.request.headers["User-Agent"] : null;
     let r = await fetch(
         "https://analytics.demilurii.art/api/v0/count",
         {
@@ -24,8 +26,8 @@ export async function onRequest(context) {
                     location: context.request.cf.country,
                     path: file_path,
                     query: url.search,
-                    ref: context.request.headers.get("Referer"),
-                    user_agent: context.request.headers.get("User-Agent"),
+                    ref: referer,
+                    user_agent: user_agent,
                 }
             })
         }
