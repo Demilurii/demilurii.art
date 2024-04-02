@@ -43,11 +43,5 @@ export async function onRequest(context) {
     url.pathname = `/miwu${file_path}`;
 
     // Request the file from the file server
-    return new Response(fetch(url.toString(), context.request), {
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET",
-            "Access-Control-Allow-Headers": "Content-Type",
-        }
-    });
+    return fetch(url.toString(), context.request);
 }
