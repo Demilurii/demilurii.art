@@ -44,6 +44,12 @@ export async function onRequest(context) {
     url.pathname = `/miwu${file_path}`;
 
     // Request the file from the file server
-    context.request.headers["X-GC-Success"] = analytics_success;
-    return fetch(url.toString(), context.request);
+    return new Response(fetch(url.toString(), context.request), {
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "X-GC-Success": analytics_success 
+        }
+    });
 }
