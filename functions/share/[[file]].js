@@ -1,3 +1,10 @@
+/**
+ * This file is a Cloudflare Pages Function that acts as a proxy to the fileserver at home.
+ * 
+ * To access any file stored on the server in your user directory, you can use the following URL:
+ * https://demilurii.art/share/<path_to_file>
+ */
+
 export function onRequest(context) {
     // Figure out the request URL
     let url = new URL(context.request.url);
