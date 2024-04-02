@@ -5,6 +5,7 @@ async function rewrite_share_domain(context) {
     // Redirect if needed
     if (url.hostname === "share.demilurii.art") {
         url.pathname = `/share${url.pathname}`;
+        url.hostname = "demilurii.art";
         return Response.redirect(url, 302);
     }
 
