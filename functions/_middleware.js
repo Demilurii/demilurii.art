@@ -6,6 +6,7 @@ async function rewrite_share_domain(context) {
     if (url.hostname === "share.demilurii.art") {
         url.pathname = `/share${url.pathname}`;
         url.hostname = "demilurii.art";
+        url.searchParams.set("utm_source", "share.demilurii.art");
         return Response.redirect(url, 302);
     }
 
