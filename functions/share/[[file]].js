@@ -23,9 +23,9 @@ export async function onRequest(context) {
             },
             body: JSON.stringify({
                 hits: {
-                    location: context.request.cf.country,
+                    // location: context.request.cf.country,
                     path: file_path,
-                    query: url.search,
+                    // query: url.search,
                     ref: referer,
                     user_agent: user_agent,
                 }
