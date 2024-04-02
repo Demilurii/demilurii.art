@@ -11,33 +11,29 @@ export async function onRequest(context) {
     let file_path = url.pathname;
 
     // Make a call to the analytics API to track this request
-    let analytics_success = false;
-    if ("GOATCOUNTER_API_KEY" in context.env) {
-        console.log("Sending analytics to GoatCounter");
-        await fetch(
-            "https://analytics.demilurii.art/api/v0/count",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + context.env.GOATCOUNTER_API_KEY
-                },
-                body: JSON.stringify({
-                    hits: {
-                        location: context.request.cf.country,
-                        path: file_path,
-                        query: url.search,
-                        ref: context.request.headers.get("Referer"),
-                        user_agent: context.request.headers.get("User-Agent"),
-                    }
-                })
-            }
-        );
-        analytics_success = true;
-    } else {
-        console.warn("No GOATCOUNTER_API_KEY environment variable found. Skipping analytics.");
+    let r = await fetch(
+        "https://analytics.demilurii.art/api/v0/count",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + context.env.GOATCOUNTER_API_KEY
+            },
+            body: JSON.stringify({
+                hits: {
+                    location: context.request.cf.country,
+                    path: file_path,
+                    query: url.search,
+                    ref: context.request.headers.get("Referer"),
+                    user_agent: context.request.headers.get("User-Agent"),
+                }
+            })
+        }
+    );
+    if (url.pathname == "/share/gc-test") {
+        return r;
     }
-
+        
     // Re-write URL to point to the real file server
     file_path = file_path.replace(/^\/share/, "");
     url.hostname = "share.ewu-home.com";
@@ -49,7 +45,6 @@ export async function onRequest(context) {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET",
             "Access-Control-Allow-Headers": "Content-Type",
-            "X-GC-Success": analytics_success 
         }
     });
 }
