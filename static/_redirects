@@ -5,3 +5,10 @@
 /instagram https://instagram.com/demilurii
 /youtube https://youtube.com/@demilurii
 /linkedin https://linkedin.com/in/demilurii
+
+/blog /notebook
+/blog/* /notebook/:splat
+
+/rss /rss.xml
+/feed /rss.xml
+/feed.xml /rss.xml
