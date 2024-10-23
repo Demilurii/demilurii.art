@@ -2,6 +2,7 @@
 title: Animation
 extra:
     excerpt: Emilia's animation showcase
+    raw_html: true
 ---
 
 <section>

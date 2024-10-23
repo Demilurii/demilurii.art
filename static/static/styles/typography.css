@@ -26,3 +26,8 @@ main h2 {
     border-bottom: 1px solid rgb(138, 138, 138);
     border-bottom-style: dashed;
 }
+
+p {
+    text-align: justify;
+    hyphens: auto;
+}

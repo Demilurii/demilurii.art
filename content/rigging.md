@@ -2,6 +2,7 @@
 title: Rigging
 extra:
     excerpt: Rigs by Emilia Frias
+    raw_html: true
 ---
 
 <section>

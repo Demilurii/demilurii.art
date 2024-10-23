@@ -2,6 +2,7 @@
 title: Short Films
 extra:
     excerpt: Short films by Emilia Frias
+    raw_html: true
 ---
 
 

@@ -31,19 +31,36 @@
 <body>
     <nav class="sticky">
         <div class="nav-content">
+            {% if page.date %}
+            <h1 class="nav-brand">Demilurii // Notebook</h1>
+            {% else %}
             <h1 class="nav-brand">Demilurii // {{title}}</h1>
+            {% endif %}
             <ul class="nav-items">
                 <li><a href="/">Home</a></li>
                 <li><a href="/animation">Animation</a></li>
                 <li><a href="/rigging">Rigging</a></li>
                 <li><a href="/short-films">Short Films</a></li>
+                {# <li><a href="/notebook">Notebook</a></li> #}
             </ul>
         </div>
     </nav>
 
+    {% if page.date %}
+    <main class="notebook-entry">
+        <h1 style="text-align: center; margin-bottom: 0;">{{page.title}}</h1>
+        <span style="display: inline-block; width: 100%; text-align: center; color:rgb(94, 94, 94);">{{page.description}}</span>
+        <hr>
+        <section>
+            {{ content | safe }}
+        </section>
+    </main>
+    {% else %}
     <main>
         {{ content | safe }}
     </main>
+    {% endif %}
+
     <script data-goatcounter="https://demilurii.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 

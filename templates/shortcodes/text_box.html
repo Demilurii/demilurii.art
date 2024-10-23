@@ -1,0 +1,8 @@
+<div class="blog-text-in-a-box">
+    {% if title %}
+    <span style="font-size:large; display:inline-block; width: 100%; text-align: center; font-weight: bold;">{{title}}</span><br>
+    {% endif %}
+    <p style="margin: 0;">
+        {{body | safe}}
+    </p>
+</div>
