@@ -24,7 +24,7 @@ layout: default
     <div class="image-wall image-wall-16-9">
         {% assign showcased_films = site.films | limit: 3 | reverse %}
         {% for film in showcased_films %}
-        <a href="{{ film.url }}"><img src="{{ film.cover_image }}"></a>
+        <a href="{{ film.url }}"><img src="{{ film.cover_image }}" class="juicy-hover"></a>
         {% endfor %}
     </div>
 </section>

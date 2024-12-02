@@ -1,0 +1,20 @@
+---
+layout: default
+title: Films
+---
+
+<header style="text-align: center;">
+    <h1>My Films</h1>
+</header>
+<hr>
+
+<section>
+    {% assign films = site.films | reverse %}
+    {% for film in films %}
+    <article>
+        <h2>{{ film.title }}</h2>
+        <a href="{{ film.url }}" class="juicy-hover"><img src="{{ film.cover_image }}" alt="{{ film.title }}"
+                style="width: 100%; border-radius: 5px;" class="juicy-hover"></a>
+    </article>
+    {% endfor %}
+</section>

@@ -13,10 +13,9 @@ body {
     padding: 1em;
 
     header {
-      min-height: 80vh;
-
       &.home-hero {
         max-width: $default-width;
+        min-height: 80vh;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -49,6 +48,7 @@ body {
 }
 
 nav {
+    z-index: 1000;
   width: 100vw;
   position: sticky;
   top: 0;
@@ -114,6 +114,15 @@ section.contact-card > div {
   }
 }
 
+img.juicy-hover {
+  transition: all 0.5s;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 .image-wall {
   display: flex;
   flex-direction: row;
@@ -123,12 +132,6 @@ section.contact-card > div {
   img {
     margin: 1em;
     border-radius: 5px;
-    transition: transform 0.25s;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 
   &.image-wall-16-9 {
@@ -143,6 +146,13 @@ section.contact-card > div {
       }
     }
   }
+}
+
+hr {
+  max-width: $default-width;
+  margin: 1em auto;
+  border: 0;
+  border-top: 1px solid #cacaca;
 }
 
 footer {
