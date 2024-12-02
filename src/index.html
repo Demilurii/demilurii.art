@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+
+<header class="home-hero">
+    <h1>Hi, I'm <strong class="accent">Emilia Frias</strong>.</h1>
+    <p>
+        I am a <strong>2D Animator</strong>, specializing in <em>rigged character animation</em>.
+        <br>
+        This website is my personal gallery; a place for me to share and showcase my work.
+    </p>
+</header>
+
+<section>
+    <h2>Demo Reel</h2>
+    <video controls poster="/assets/demo-reel-cover.jpg">
+        <source src="/assets/demo-reel.mp4" type="video/mp4">
+    </video>
+</section>
+
+<section>
+    <h2>Films</h2>
+    <div class="image-wall image-wall-16-9">
+        {% assign showcased_films = site.films | limit: 3 | reverse %}
+        {% for film in showcased_films %}
+        <a href="{{ film.url }}"><img src="{{ film.cover_image }}"></a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="contact-card">
+    <div>
+        <p>
+            Like what you see? Want to get in touch?
+            <br>
+            Email me at <a href="mailto:miwu@demilurii.art">miwu@demilurii.art</a>
+        </p>
+    </div>
+</section>

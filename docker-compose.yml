@@ -1,0 +1,13 @@
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: serve --watch
+    platform: linux/x86_64
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/srv/jekyll:Z
+    ports:
+      - "127.0.0.1:4000:4000"

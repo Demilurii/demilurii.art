@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+$accent-green: #26875e;
+$default-width: 1000px;
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 300;
+
+  main {
+    padding: 1em;
+
+    header {
+      min-height: 80vh;
+
+      &.home-hero {
+        max-width: $default-width;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        font-size: 2em;
+        line-height: 1.5;
+      }
+    }
+    section {
+      width: 100%;
+
+      &:not(:first-of-type) {
+        margin-top: 4em;
+      }
+
+      & > * {
+        display: block;
+        width: 100%;
+        max-width: $default-width;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h2 {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+nav {
+  width: 100vw;
+  position: sticky;
+  top: 0;
+
+  background-color: #f9f8f877;
+  backdrop-filter: blur(10px);
+  mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%);
+
+  div {
+    // width: 100%;
+    max-width: $default-width;
+    margin: auto;
+    padding: 1em;
+
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: black;
+      text-decoration: none;
+      transition: all 0.5s;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 0 0.5em;
+      }
+    }
+  }
+}
+
+strong.accent {
+  color: $accent-green !important;
+}
+
+video {
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+section.contact-card > div {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 1em 0;
+  font-size: 1.25em;
+  line-height: 1.5;
+  text-align: center;
+
+  a {
+    color: $accent-green;
+    text-decoration: none;
+  }
+}
+
+.image-wall {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  img {
+    margin: 1em;
+    border-radius: 5px;
+    transition: transform 0.25s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &.image-wall-16-9 {
+    img {
+      max-width: 450px;
+      aspect-ratio: 16 / 9;
+
+      @media screen and (max-width: calc(450px + 2em)) {
+        & {
+          width: calc(100vw - 2em);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 1em;
+  text-align: center;
+  color: #cacaca;
+}

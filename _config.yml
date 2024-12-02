@@ -1,0 +1,50 @@
+title: Emilia Frias
+description: Emilia Frias is a 2D Rigged Character Animator.
+# profile_photo: &profile_photo /assets/profile-photos/2022/460x460.webp
+encoding: utf-8
+source: src
+
+# Development settings
+host: 0.0.0.0
+port: 4000
+livereload: true
+
+# URL
+baseurl: /
+url: https://demilurii.art
+
+# RSS
+feed:
+  # icon: *profile_photo
+  path: rss.xml
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Plugins
+plugins:
+  - jekyll-feed
+
+# Per-collection settings
+collections:
+  posts:
+    output: true
+    permalink: /notebook/:title
+  films:
+    output: true
+    permalink: /films/:title
+
+# Exclusions
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

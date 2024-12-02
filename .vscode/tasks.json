@@ -6,11 +6,14 @@
         {
             "label": "Launch development webserver",
             "type": "shell",
-            "command": "zola",
+            "command": "docker",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "args": [
-                "serve",
-                "--drafts",
-                "--open"
+                "compose",
+                "up",
+                "--build"
             ],
             "problemMatcher": []
         }
