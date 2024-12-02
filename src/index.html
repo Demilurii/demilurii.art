@@ -2,7 +2,6 @@
 layout: default
 ---
 
-
 <header class="home-hero">
     <h1>Hi, I'm <strong class="accent">Emilia Frias</strong>.</h1>
     <p>
@@ -14,7 +13,7 @@ layout: default
 
 <section>
     <h2>Demo Reel</h2>
-    <video controls poster="/assets/demo-reel-cover.jpg">
+    <video controls poster="/assets/demo-reel-cover.jpg" class="expanding-video">
         <source src="/assets/demo-reel.mp4" type="video/mp4">
     </video>
 </section>
@@ -22,7 +21,7 @@ layout: default
 <section>
     <h2>Films</h2>
     <div class="image-wall image-wall-16-9">
-        {% assign showcased_films = site.films | limit: 3 | reverse %}
+        {% assign showcased_films = site.films | limit: 4 | reverse %}
         {% for film in showcased_films %}
         <a href="{{ film.url }}"><img src="{{ film.cover_image }}" class="juicy-hover"></a>
         {% endfor %}

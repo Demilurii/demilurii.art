@@ -35,6 +35,9 @@ collections:
   films:
     output: true
     permalink: /films/:title
+  rigs:
+    output: true
+    permalink: /rigs/:title
 
 # Exclusions
 exclude:

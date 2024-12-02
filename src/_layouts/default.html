@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emilia Frias</title>
     <link rel="stylesheet" href="/assets/css/main-compiled.css">
+    {% if page.head %}
+    {{ page.head | safe }}
+    {% endif %}
 </head>
 
 <body>
@@ -18,7 +21,7 @@
             <ul>
                 <li><a href="/rigging">Rigging</a></li>
                 <li><a href="/films">Films</a></li>
-               <!-- <li><a href="/notebook">Notebook</a></li> -->
+                <!-- <li><a href="/notebook">Notebook</a></li> -->
             </ul>
         </div>
     </nav>
@@ -28,6 +31,34 @@
     <footer>
         Copyright © Emilia Frias
     </footer>
+
+    <!-- Expanding Video Logic -->
+    <script>
+        function increaseVideoSize(video) {
+            video.style.width = "100%";
+            video.style.maxWidth = "max(85vw, 1000px)";
+            video.scrollIntoView({ block: 'center' });
+            setTimeout(() => {
+                video.scrollIntoView({ block: 'center' });
+            }, 100);
+            setTimeout(() => {
+                video.scrollIntoView({ block: 'center' });
+            }, 200);
+            setTimeout(() => {
+                video.scrollIntoView({ block: 'center' });
+            }, 250);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            let videos = document.getElementsByClassName("expanding-video");
+            Array.from(videos).forEach(video => {
+                video.addEventListener("playing", () => {
+                    increaseVideoSize(video);
+                });
+            });
+        });
+    </script>
+
+    <script data-goatcounter="https://demilurii.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
 
