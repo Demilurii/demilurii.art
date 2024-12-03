@@ -42,6 +42,9 @@ collections:
       - sprout
       - miwu
 
+include:
+  - _redirects
+
 # Exclusions
 exclude:
   - .sass-cache/
