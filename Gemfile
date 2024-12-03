@@ -22,3 +22,4 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # Various others
 gem "webrick", "~> 1.9"
 gem "kramdown", "~> 2.4"
+gem 'jekyll-target-blank', '~> 2.0'

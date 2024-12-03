@@ -7,7 +7,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emilia Frias</title>
+    <title>
+        {% if page.title %}{{ page.title }} | {% endif %}Emilia Frias
+    </title>
+    <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.png" />
+    <link rel="canonical" href="{{ site.url | downcase }}{{ page.url | replace: '.html', '' | downcase }}" />
     <link rel="stylesheet" href="/assets/css/main-compiled.css">
     {% if page.head %}
     {{ page.head | safe }}

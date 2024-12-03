@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<h1 style="text-align: center">{{ page.title }}</h1>
+<hr>
+
+
+<video controls poster="{{ page.showcase_video_cover }}" style="display: block; max-width: 1350px; margin: auto;">
+    <source src="{{ page.showcase_video }}" type="video/mp4">
+</video>
+
+
+<section
+    style="display: flex; flex-direction: row; justify-content: space-around; max-width: 1350px; margin: 2em auto;">
+    {% for image in page.rig_rotation_assets %}
+    <img src="{{ image }}" style="display: block; max-width: calc(1350px / 9);">
+    {% endfor %}
+</section>
+
+<section>
+    {{content}}
+</section>
+
+<section style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; max-width: 1350px; margin: auto;">
+    {% for gif in page.showcase_gifs %}
+    <img src="{{ gif }}" alt=""
+        style="margin: 1em; border-radius: 5px; max-width: min(100vw, (1350px/{{page.showcase_gifs | size}}) - 2em); box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+    {% endfor %}
+</section>
