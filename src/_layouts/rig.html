@@ -14,7 +14,7 @@ layout: default
 <section
     style="display: flex; flex-direction: row; justify-content: space-around; max-width: 1350px; margin: 2em auto;">
     {% for image in page.rig_rotation_assets %}
-    <img src="{{ image }}" style="display: block; max-width: calc(1350px / 9);">
+    <img src="{{ image }}" style="display: block; max-width: calc(min(1350px 100vw) / 9);">
     {% endfor %}
 </section>
 
