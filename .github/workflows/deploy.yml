@@ -3,7 +3,7 @@ name: Deploy demilurii.art
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
       deployments: write
 
     steps:
-      - name: Checkout master
+      - name: Checkout main
         uses: actions/checkout@v4
 
       - name: Build website
