@@ -9,7 +9,7 @@ title: Rigging
 <hr>
 
 <section style="display: flex; flex-direction: row; align-items: end; justify-content: space-evenly; flex-wrap: wrap; max-width: 1000px; margin: auto;">
-    {% assign rigs = site.rigs | reverse %}
+    {% assign rigs = site.rigs %}
     {% for rig in rigs %}
     <div style="width: max-content;">
         <a href="{{ rig.url }}" style="display: block; width: max-content;">

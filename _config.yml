@@ -1,6 +1,5 @@
 title: Emilia Frias
 description: Emilia Frias is a 2D Rigged Character Animator.
-# profile_photo: &profile_photo /assets/profile-photos/2022/460x460.webp
 encoding: utf-8
 source: src
 
@@ -15,7 +14,6 @@ url: https://demilurii.art
 
 # RSS
 feed:
-  # icon: *profile_photo
   path: rss.xml
 
 # Markdown
@@ -39,6 +37,10 @@ collections:
   rigs:
     output: true
     permalink: /rigs/:title
+    order:
+      - sunni
+      - sprout
+      - miwu
 
 # Exclusions
 exclude:

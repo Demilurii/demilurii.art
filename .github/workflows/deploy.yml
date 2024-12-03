@@ -1,0 +1,32 @@
+name: Deploy demilurii.art
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+
+      - name: Build website
+        run: docker compose run jekyll build
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ewpratten
+          directory: _site
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '2'
