@@ -155,7 +155,9 @@ img.juicy-hover {
 
       @media screen and (max-width: calc(450px + 2em)) {
         & {
-          width: calc(100vw - 2em);
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
         }
       }
     }
