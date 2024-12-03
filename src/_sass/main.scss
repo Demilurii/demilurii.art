@@ -169,6 +169,15 @@ hr {
   border-top: 1px solid #cacaca;
 }
 
+a {
+  color: $accent-green;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 section p {
   font-size: 1.25em;
 }

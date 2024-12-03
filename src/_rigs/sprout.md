@@ -17,3 +17,7 @@ showcase_video_cover: /assets/rigs/sprout/showcase/cover.jpg
 showcase_gifs:
     - /assets/rigs/sprout/showcase-gifs/SproutRig_01.gif
 ---
+
+I based this rig off of my short film, [Sprout](/films/sprout).
+
+Created over a spring break, Sprout's design is very limited in nature and was a great way to experiment with new rigging techniques.

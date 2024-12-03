@@ -18,3 +18,7 @@ showcase_gifs:
     - /assets/rigs/miwu/showcase-gifs/MiwuRig_01.gif
     - /assets/rigs/miwu/showcase-gifs/MiwuRig_02.gif
 ---
+
+I challenged myself to create this rig in two days to see what I could accomplish with my current rigging skills. 
+
+She was my first fully rotated character that I made for the explicit purpose of improving both my rigging and animation skills.
