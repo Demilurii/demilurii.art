@@ -178,6 +178,13 @@ a {
   &:hover {
     text-decoration: underline;
   }
+
+  &.rig-page-link {
+    color: black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 section p {

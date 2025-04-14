@@ -1,8 +1,8 @@
 ---
 layout: film
 title: Raindrops
-cover_image: /assets/films/raindrops/cover.jpg
-video: /assets/films/raindrops/video.mp4
+cover_image: https://media.demilurii.art/films/raindrops/cover.jpg
+video: https://media.demilurii.art/films/raindrops/video.mp4
 ---
 
 *Finally reaching the end of the storm and basking in the sunlight.*

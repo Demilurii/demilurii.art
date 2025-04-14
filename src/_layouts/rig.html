@@ -6,7 +6,7 @@ layout: default
 <hr>
 
 
-<video controls poster="{{ page.showcase_video_cover }}" style="display: block; max-width: 1350px; margin: auto;">
+<video controls poster="{{ page.showcase_video_cover }}" style="display: block; max-width: 1350px; margin: auto; background-color: black;">
     <source src="{{ page.showcase_video }}" type="video/mp4">
 </video>
 
@@ -25,6 +25,6 @@ layout: default
 <section style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; max-width: 1350px; margin: auto;">
     {% for gif in page.showcase_gifs %}
     <img src="{{ gif }}" alt=""
-        style="margin: 1em; border-radius: 5px; max-width: min(100vw, (1350px/{{page.showcase_gifs | size}}) - 2em); box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+        style="margin: 1em; border-radius: 5px; max-width: min(100vw, (1350px/{{page.showcase_gifs | size | at_most: 2}}) - 2em); box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; width: 100%;">
     {% endfor %}
 </section>

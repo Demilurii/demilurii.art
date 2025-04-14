@@ -3,19 +3,23 @@ layout: default
 title: Rigging
 ---
 
-<header style="text-align: center;">
-    <h1>My Rigs</h1>
-</header>
-<hr>
 
-<section style="display: flex; flex-direction: row; align-items: end; justify-content: space-evenly; flex-wrap: wrap; max-width: 1000px; margin: auto;">
-    {% assign rigs = site.rigs %}
-    {% for rig in rigs %}
-    <div style="width: max-content;">
-        <a href="{{ rig.url }}" style="display: block; width: max-content;">
-            <img src="{{ rig.rig_image }}" style="width: 300px; box-shadow: none;" class="juicy-hover">
-        </a>
+
+{% assign grouped_rigs = site.rigs | group_by_exp: "rig", "rig.rig_group" %}
+{% for rig_group in grouped_rigs %}
+<section
+    style="display: flex; flex-direction: row; align-items: end; justify-content: space-evenly; flex-wrap: wrap; max-width: 1000px; margin: auto;">
+    <header style="text-align: center;">
+        <h1>{{ rig_group.name }}</h1>
+    </header>
+    <hr>
+    {% for rig in rig_group.items %}
+    <a href="{{ rig.url }}" class="rig-page-link" style="display: block; text-align: center; width: calc(min({{ rig.override_width | default: '300px' }}, 100%));">
+        <img src="{{ rig.rig_image }}"
+            style="display: block; width: 100%; box-shadow: none;"
+            class="juicy-hover">
         <h2 style="width: 100%; text-align: center;">{{ rig.title }}</h2>
-    </div>
+    </a>
     {% endfor %}
 </section>
+{% endfor %}

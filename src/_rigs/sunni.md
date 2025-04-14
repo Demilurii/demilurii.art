@@ -1,14 +1,15 @@
 ---
 layout: rig
 title: Sunni
-rig_image: /assets/rigs/sunni/sunni-01.png
+rig_group: Other Rigs
+rig_image: https://media.demilurii.art/rigs/other/sunni/rotation/sunni-01.png
 rig_rotation_assets:
-    - /assets/rigs/sunni/sunni-01.png
-showcase_video: /assets/rigs/sunni/showcase/showcase.mp4
-showcase_video_cover: /assets/rigs/sunni/showcase/cover.jpg
+    - https://media.demilurii.art/rigs/other/sunni/rotation/sunni-01.png
+showcase_video: https://media.demilurii.art/rigs/other/sunni/showcase/showcase.mp4
+showcase_video_cover: https://media.demilurii.art/rigs/other/sunni/showcase/cover.jpg
 showcase_gifs:
-    - /assets/rigs/sunni/showcase-gifs/SunniRig_01.gif
-    - /assets/rigs/sunni/showcase-gifs/SunniRig_02.gif
+    - https://media.demilurii.art/rigs/other/sunni/gifs/SunniRig_01.gif
+    - https://media.demilurii.art/rigs/other/sunni/gifs/SunniRig_02.gif
 ---
 
 Sunni was my first self-built rig. I based her off of one of my Dungeons and Dragons characters.

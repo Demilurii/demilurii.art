@@ -1,8 +1,8 @@
 ---
 layout: film
 title: Storm Clouds
-cover_image: /assets/films/storm-clouds/cover.jpg
-video: /assets/films/storm-clouds/video.mp4
+cover_image: https://media.demilurii.art/films/storm-clouds/cover.jpg
+video: https://media.demilurii.art/films/storm-clouds/video.mp4
 ---
 
 *Bunny learns to tackle her stormcloud one bit at a time.*
